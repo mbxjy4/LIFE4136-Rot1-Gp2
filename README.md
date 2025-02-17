@@ -1,12 +1,27 @@
 **LIFE4136 Rotation 1 Group 2**
 This Repo contains the scripts used by Group 2 in completion of Rotation1 of the LIFE4136 Group Projects Module. Examples are given for Barcode 6 as this sample was analysed after Barcode 2 (so the names of the scripts are a bit clearer due to knowing a bit more about what we we were doing!). The equivalent (slightly more confusingly) named scripts used for Barcode 2 are found at the end of this README but the relation to Barcode 6 should make it clear what they are doing. 
 
-<!-- TOC -->
+<!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
 
+- [Overview & Usage](#overview-usage)
+- [Merging Files](#merging-files)
+- [QCing Long Read Files](#qcing-long-read-files)
+- [Assemblies](#assemblies)
+- [Reviewing Assembly Quality](#reviewing-assembly-quality)
+- [Annotating the Hybrid Assembly](#annotating-the-hybrid-assembly)
+- [Visualising Hybrid Assembly](#visualising-hybrid-assembly)
+- [IGV Preperation](#igv-preperation)
+- [Equivalent Scripts For Barcode02](#equivalent-scripts-for-barcode02)
+- [Contributors](#contributors)
+
+<!-- TOC end --> 
+
+<!-- TOC --><a name="overview-usage"></a>
 ## Overview & Usage
 
 The aim of this project was to identify genetic changes made by a group of scientists to the genome of a microorganism. The following code represents the order in which steps were followed to achieve this. Please note that packages were required for most steps - these can be found in the *requirements.txt* file. I recomend using seperate Conda environments to use these packages - a single Conda environment with all packages may well work, however I can not be sure, as we did not do this and it's possible conflicts could arise through having multiple packages in the same Conda environment.
 
+<!-- TOC --><a name="merging-files"></a>
 ## Merging Files
 
 Data was provided in the form of Illumina Short Read (R1 and R2) and Fastq Long Read data (Pass and Fail). Data was merged to make data processing easier using the scripts listed below:
@@ -20,6 +35,7 @@ Data was provided in the form of Illumina Short Read (R1 and R2) and Fastq Long 
 |Short Read Reverse|[short06_reverse_merged.sh](https://github.com/mbxjy4/LIFE4136-Rot1-Gp2/blob/main/Bar06/Merge_Scripts/short06_reverse_merged.sh)|
 
 
+<!-- TOC --><a name="qcing-long-read-files"></a>
 ## QCing Long Read Files
 Short Read Data already had QC reports available and all samples were deemed suitable for analysis. NanoPlot package was used to QC the Long Read data. Install into a Conda environment using:
 
@@ -33,6 +49,7 @@ Long Read Data was QC checked using the scripts listed below:
 |Fail|[fail06qc_slurm.sh](https://github.com/mbxjy4/LIFE4136-Rot1-Gp2/blob/main/Bar06/Long_Read_QC_Scripts/fail06qc_slurm.sh)|
 |All|[all06qc_slurm.sh](https://github.com/mbxjy4/LIFE4136-Rot1-Gp2/blob/main/Bar06/Long_Read_QC_Scripts/all06qc_slurm.sh)|
 
+<!-- TOC --><a name="assemblies"></a>
 ## Assemblies
 The Short Read and Long Read data was assembled, with the resulting assemblies used to build a Hybrid assembly. Assemblies were performed using the Unicylcer package. Install into a Conda environment using:
 
@@ -46,6 +63,7 @@ Long Read, Short Read and Hybrid data was assembled using the scripts below:
 |Short Read|[short06_assembly.sh](https://github.com/mbxjy4/LIFE4136-Rot1-Gp2/blob/main/Bar06/Assembly_Scripts/short06_assembly.sh)|   |
 |Hybrid|[hybrid06_assembly.sh](https://github.com/mbxjy4/LIFE4136-Rot1-Gp2/blob/main/Bar06/Assembly_Scripts/hybrid06_assembly.sh)|The Hybrid Assembly was used going forward in Data Processing|
 
+<!-- TOC --><a name="reviewing-assembly-quality"></a>
 ## Reviewing Assembly Quality
 All Assemblies were reviewed for quality against a reference genome. The [reference genome](https://github.com/mbxjy4/LIFE4136-Rot1-Gp2/blob/main/Ref_Genomes/refcombined1.fasta) was formed of 4 samples taken from BLAST after running DNA searches taken from the assembled genome. Review of the assembly was performed using the Quast package. Install into a Conda environment using:
 
@@ -53,6 +71,7 @@ All Assemblies were reviewed for quality against a reference genome. The [refere
 
 Script used: [quast06_2.sh](https://github.com/mbxjy4/LIFE4136-Rot1-Gp2/blob/main/Bar06/Quast_Scripts/quast06_2.sh)
 
+<!-- TOC --><a name="annotating-the-hybrid-assembly"></a>
 ## Annotating the Hybrid Assembly
 
 The Hybrid Asembly was annotated using the Prokka package. The Reference Genome was also annotated for use during IGV analysis (mentioned in IGV Preperation). Install into a Conda environment using:
@@ -67,6 +86,7 @@ Genomes were annotated using the scripts below:
 |Reference Genome|[ref1_prokka.sh](https://github.com/mbxjy4/LIFE4136-Rot1-Gp2/blob/main/Ref_Genomes/Ref_Prokka/ref1_prokka.sh)|
 
 
+<!-- TOC --><a name="visualising-hybrid-assembly"></a>
 ## Visualising Hybrid Assembly
 It was deemed from the Quast Report that there were 3 seperate genetic assemblies present in the Hybrid Assembly. This was visualised using the Genovi package. Install into a Conda environment using:
 
@@ -74,13 +94,16 @@ It was deemed from the Quast Report that there were 3 seperate genetic assemblie
 
 Script Used: [genovi06_1.sh](https://github.com/mbxjy4/LIFE4136-Rot1-Gp2/blob/main/Bar06/Genovi_Scripts/genovi06_1.sh)
 
+<!-- TOC --><a name="igv-preperation"></a>
 ## IGV Preperation
 The Long and Short Read assemblies and subsequent alignement was visualised using IGV, available to download [here](https://igv.org/doc/desktop/#DownloadPage/). This software requires sorted .BAM files alongside respective index files. The files were visualised against the reference genome and respective index and .gff files created using the [ref1_prokka.sh](https://github.com/mbxjy4/LIFE4136-Rot1-Gp2/blob/main/Ref_Genomes/Ref_Prokka/ref1_prokka.sh) script. 
 
 Short Read Preperation used bwa and samtools packages. Long Read Preperation used minimap2 and samtools. Install into a Conda environment using:
 
 *conda install bioconda::bwa*
+
 *conda install bioconda::minimap2*
+
 *conda install bioconda::samtools*
 
 Short Read data was prepared for viewing in IGV using the scripts below:
@@ -101,6 +124,7 @@ Long Read data was prepared for viewing in IGV using the scripts below:
 |Creating Sorted .BAM file|samtools|[minimap2_06bamsorted.sh](https://github.com/mbxjy4/LIFE4136-Rot1-Gp2/blob/main/Bar06/IGV_Preparation_Scripts/Longread/minimap2_06bamsorted.sh)|
 |Creating Sorted .BAM.bai file|samtools|[minimap2_06bamsortedindex.sh](https://github.com/mbxjy4/LIFE4136-Rot1-Gp2/blob/main/Bar06/IGV_Preparation_Scripts/Longread/minimap2_06bamsortedindex.sh)|
 
+<!-- TOC --><a name="equivalent-scripts-for-barcode02"></a>
 ## Equivalent Scripts For Barcode02
 
 |Stage|Barcode06 Script|Barcode02 Script|
@@ -128,5 +152,6 @@ Long Read data was prepared for viewing in IGV using the scripts below:
 |IGV Preperation|[minimap2_06bamsorted.sh](https://github.com/mbxjy4/LIFE4136-Rot1-Gp2/blob/main/Bar06/IGV_Preparation_Scripts/Longread/minimap2_06bamsorted.sh)|[minimap2bam1sorted.sh](https://github.com/mbxjy4/LIFE4136-Rot1-Gp2/blob/main/Bar02/IGV_Preparation_Scripts/Longread/minimap2bam1sorted.sh)|
 |IGV Preperation|[minimap2_06bamsortedindex.sh](https://github.com/mbxjy4/LIFE4136-Rot1-Gp2/blob/main/Bar06/IGV_Preparation_Scripts/Longread/minimap2_06bamsortedindex.sh)|[minimap2bam1sortedindex.sh](https://github.com/mbxjy4/LIFE4136-Rot1-Gp2/blob/main/Bar02/IGV_Preparation_Scripts/Longread/minimap2bam1sortedindex.sh)|
 
+<!-- TOC --><a name="contributors"></a>
 ## Contributors
 All scripts and analysis were completed jointly with Areeba and Shifra, thank you both!!
