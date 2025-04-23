@@ -19,7 +19,7 @@ This Repo contains the scripts used by Group 2 in completion of Rotation1 of the
 <!-- TOC --><a name="overview-usage"></a>
 ## Overview & Usage
 
-The aim of this project was to identify genetic changes made by a group of scientists to the genome of a microorganism. The following code represents the order in which steps were followed to achieve this. Please note that packages were required for most steps - these can be found in the *requirements.txt* file. I recomend using seperate Conda environments to use these packages - a single Conda environment with all packages may well work, however I can not be sure, as we did not do this and it's possible conflicts could arise through having multiple packages in the same Conda environment.
+The aim of this project was to identify genetic changes made by a group of scientists to the genome of a microorganism. The following code represents the order in which steps were followed to achieve this. Please note that packages were required for most steps. I recomend using seperate Conda environments to use these packages, details of how to create and install each are described where appropriate. A single Conda environment with all tools may well work, however, I can not be sure as we did not do this and it's possible conflicts could arise through having multiple packages in the same Conda environment.
 
 <!-- TOC --><a name="merging-files"></a>
 ## Merging Files
