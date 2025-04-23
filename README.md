@@ -1,6 +1,8 @@
 **LIFE4136 Rotation 1 Group 2**
 This Repo contains the scripts used by Group 2 in completion of Rotation1 of the LIFE4136 Group Projects Module. Examples are given for Barcode 6 as this sample was analysed after Barcode 2 (so the names of the scripts are a bit clearer due to knowing a bit more about what we we were doing!). The equivalent (slightly more confusingly) named scripts used for Barcode 2 are found at the end of this README but the relation to Barcode 6 should make it clear what they are doing. 
 
+Note: Please update all directory paths as appropriate for your analysis to ensure code can run smoothly.
+
 <!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
 
 - [Overview & Usage](#overview-usage)
