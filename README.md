@@ -21,7 +21,7 @@ Note: Please update all directory paths as appropriate for your analysis to ensu
 <!-- TOC --><a name="overview-usage"></a>
 ## Overview & Usage
 
-The aim of this project was to identify genetic changes made by a group of scientists to the genome of a microorganism. The following code represents the order in which steps were followed to achieve this. Please note that packages were required for most steps. I recomend using seperate Conda environments to use these packages, details of how to create and install each are described where appropriate. A single Conda environment with all tools may well work, however, I can not be sure as we did not do this and it's possible conflicts could arise through having multiple packages in the same Conda environment.
+The aim of this project was to identify genetic changes made by a group of scientists to the genome of a microorganism. The following code represents the order in which steps were followed to achieve this. Please note that packages are required for most steps. I recomend using seperate Conda environments to use these packages, details of how to create and install each are described below. A single Conda environment with all tools may well work, however, I can not be sure as we did not do this and it's possible conflicts may arise through having multiple packages in the same Conda environment.
 
 <!-- TOC --><a name="merging-files"></a>
 ## Merging Files
@@ -42,8 +42,8 @@ Data was provided in the form of Illumina Short Read (R1 and R2) and Fastq Long 
 Short Read Data already had QC reports available and all samples were deemed suitable for analysis. NanoPlot package was used to QC the Long Read data. Install into a Conda environment using:
 
 ```bash
-conda create -n nanoplot
-conda activate nanoplot
+conda create -n NanoPlot
+conda activate NanoPlot
 conda install bioconda::nanoplot
 ```
 
@@ -60,8 +60,8 @@ Long Read Data was QC checked using the scripts listed below:
 The Short Read and Long Read data was assembled, with the resulting assemblies used to build a Hybrid assembly. Assemblies were performed using the Unicylcer package. Install into a Conda environment using:
 
 ```bash
-conda create -n unicycler
-conda activate unicycler
+conda create -n Unicycler
+conda activate Unicycler
 conda install bioconda::unicycler
 ```
 
@@ -78,8 +78,8 @@ Long Read, Short Read and Hybrid data was assembled using the scripts below:
 All Assemblies were reviewed for quality against a reference genome. The [reference genome](https://github.com/mbxjy4/LIFE4136-Rot1-Gp2/blob/main/Ref_Genomes/refcombined1.fasta) was formed of 4 samples taken from BLAST after running DNA searches taken from the assembled genome. Review of the assembly was performed using the Quast package. Install into a Conda environment using:
 
 ```bash
-conda create -n quast
-conda activate quast
+conda create -n Quast
+conda activate Quast
 conda install bioconda::quast
 ```
 
@@ -91,8 +91,8 @@ Script used: [quast06_2.sh](https://github.com/mbxjy4/LIFE4136-Rot1-Gp2/blob/mai
 The Hybrid Asembly was annotated using the Prokka package. The Reference Genome was also annotated for use during IGV analysis (mentioned in IGV Preperation). Install into a Conda environment using:
 
 ```bash
-conda create -n prokka
-conda activate prokka
+conda create -n Prokka
+conda activate Prokka
 conda install bioconda::prokka
 ```
 
@@ -109,8 +109,8 @@ Genomes were annotated using the scripts below:
 It was deemed from the Quast Report that there were 3 seperate genetic assemblies present in the Hybrid Assembly. This was visualised using the Genovi package. Install into a Conda environment using:
 
 ```bash
-conda create -n genovi
-conda activate genovi
+conda create -n Genovi
+conda activate Genovi
 conda install bioconda::genovi
 ```
 
@@ -123,20 +123,20 @@ The Long and Short Read assemblies and subsequent alignement was visualised usin
 Short Read Preperation used bwa and samtools packages. Long Read Preperation used minimap2 and samtools. Install each into a sepearate Conda environment using:
 
 ```bash
-conda create -n bwa
-conda activate bwa
+conda create -n BWA
+conda activate BWA
 conda install bioconda::bwa
 ```
 
 ```bash
-conda create -n minimap2
-conda activate minimap2
+conda create -n Minimap2
+conda activate Minimap2
 conda install bioconda::minimap2
 ```
 
 ```bash
-conda create -n samtools
-conda activate samtools
+conda create -n Samtools
+conda activate Samtools
 conda install bioconda::samtools
 ```
 
