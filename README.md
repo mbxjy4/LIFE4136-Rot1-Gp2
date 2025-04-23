@@ -194,6 +194,11 @@ All scripts and analysis were completed jointly with Areeba Salman and Shixuan L
 <!-- TOC --><a name="references"></a>
 ## References
 
+**BLAST**
+
+Altschul, S.F., Gish, W., Miller, W., Myers, E.W., & Lipman, D.J. (1990). Basic local alignment search tool. Journal of Molecular Biology, 215(3), 403–410.
+https://doi.org/10.1016/S0022-2836(05)80360-2
+
 **BWA**
 
 Li, H., & Durbin, R. (2009). Fast and accurate short read alignment with Burrows–Wheeler transform. Bioinformatics, 25(14), 1754–1760.
