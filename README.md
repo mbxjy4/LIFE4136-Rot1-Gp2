@@ -41,6 +41,8 @@ Data was provided in the form of Illumina Short Read (R1 and R2) and Fastq Long 
 ## QCing Long Read Files
 Short Read Data already had QC reports available and all samples were deemed suitable for analysis. NanoPlot package was used to QC the Long Read data. Install into a Conda environment using:
 
+<pre lang="markdown"> ```bash conda install bioconda::nanoplot ``` </pre>
+
 *conda install bioconda::nanoplot*
 
 Long Read Data was QC checked using the scripts listed below: 
