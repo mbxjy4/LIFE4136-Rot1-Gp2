@@ -204,6 +204,11 @@ https://doi.org/10.1093/bioinformatics/btp324
 Laing, C., Buchanan, C., Taboada, E.N., Zhang, Y., Kropinski, A., Villegas, A., & Thomas, J.E. (2021). GENOVI: Rapid quality-controlled prokaryotic genome assembly and annotation pipeline. Microbial Genomics, 7(10).
 https://doi.org/10.1099/mgen.0.000640
 
+**IGV**
+
+Robinson, J.T., Thorvaldsdóttir, H., Winckler, W., Guttman, M., Lander, E.S., Getz, G., & Mesirov, J.P. (2011). Integrative Genomics Viewer. Nature Biotechnology, 29(1), 24–26. 
+https://doi.org/10.1038/nbt.1754
+
 **Minimap2**
 
 Li, H. (2018). Minimap2: pairwise alignment for nucleotide sequences. Bioinformatics, 34(18), 3094–3100.
