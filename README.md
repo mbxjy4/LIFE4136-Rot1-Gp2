@@ -60,6 +60,8 @@ Long Read Data was QC checked using the scripts listed below:
 The Short Read and Long Read data was assembled, with the resulting assemblies used to build a Hybrid assembly. Assemblies were performed using the Unicylcer package. Install into a Conda environment using:
 
 ```bash
+conda create -n unicycler
+conda activate unicycler
 conda install bioconda::unicycler
 ```
 
@@ -76,6 +78,8 @@ Long Read, Short Read and Hybrid data was assembled using the scripts below:
 All Assemblies were reviewed for quality against a reference genome. The [reference genome](https://github.com/mbxjy4/LIFE4136-Rot1-Gp2/blob/main/Ref_Genomes/refcombined1.fasta) was formed of 4 samples taken from BLAST after running DNA searches taken from the assembled genome. Review of the assembly was performed using the Quast package. Install into a Conda environment using:
 
 ```bash
+conda create -n quast
+conda activate quast
 conda install bioconda::quast
 ```
 
@@ -87,6 +91,8 @@ Script used: [quast06_2.sh](https://github.com/mbxjy4/LIFE4136-Rot1-Gp2/blob/mai
 The Hybrid Asembly was annotated using the Prokka package. The Reference Genome was also annotated for use during IGV analysis (mentioned in IGV Preperation). Install into a Conda environment using:
 
 ```bash
+conda create -n prokka
+conda activate prokka
 conda install bioconda::prokka
 ```
 
@@ -103,6 +109,8 @@ Genomes were annotated using the scripts below:
 It was deemed from the Quast Report that there were 3 seperate genetic assemblies present in the Hybrid Assembly. This was visualised using the Genovi package. Install into a Conda environment using:
 
 ```bash
+conda create -n genovi
+conda activate genovi
 conda install bioconda::genovi
 ```
 
@@ -115,14 +123,20 @@ The Long and Short Read assemblies and subsequent alignement was visualised usin
 Short Read Preperation used bwa and samtools packages. Long Read Preperation used minimap2 and samtools. Install each into a sepearate Conda environment using:
 
 ```bash
+conda create -n bwa
+conda activate bwa
 conda install bioconda::bwa
 ```
 
 ```bash
+conda create -n minimap2
+conda activate minimap2
 conda install bioconda::minimap2
 ```
 
 ```bash
+conda create -n samtools
+conda activate samtools
 conda install bioconda::samtools
 ```
 
