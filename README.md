@@ -45,8 +45,6 @@ Short Read Data already had QC reports available and all samples were deemed sui
 conda install bioconda::nanoplot
 ```
 
-*conda install bioconda::nanoplot*
-
 Long Read Data was QC checked using the scripts listed below: 
 
 |Data QC Checked|Script Used|Notes|
@@ -59,7 +57,9 @@ Long Read Data was QC checked using the scripts listed below:
 ## Assemblies
 The Short Read and Long Read data was assembled, with the resulting assemblies used to build a Hybrid assembly. Assemblies were performed using the Unicylcer package. Install into a Conda environment using:
 
-*conda install bioconda::unicycler*
+```bash
+conda install bioconda::unicycler
+```
 
 Long Read, Short Read and Hybrid data was assembled using the scripts below: 
 
@@ -73,7 +73,9 @@ Long Read, Short Read and Hybrid data was assembled using the scripts below:
 ## Reviewing Assembly Quality
 All Assemblies were reviewed for quality against a reference genome. The [reference genome](https://github.com/mbxjy4/LIFE4136-Rot1-Gp2/blob/main/Ref_Genomes/refcombined1.fasta) was formed of 4 samples taken from BLAST after running DNA searches taken from the assembled genome. Review of the assembly was performed using the Quast package. Install into a Conda environment using:
 
-*conda install bioconda::quast*
+```bash
+conda install bioconda::quast
+```
 
 Script used: [quast06_2.sh](https://github.com/mbxjy4/LIFE4136-Rot1-Gp2/blob/main/Bar06/Quast_Scripts/quast06_2.sh)
 
@@ -82,7 +84,9 @@ Script used: [quast06_2.sh](https://github.com/mbxjy4/LIFE4136-Rot1-Gp2/blob/mai
 
 The Hybrid Asembly was annotated using the Prokka package. The Reference Genome was also annotated for use during IGV analysis (mentioned in IGV Preperation). Install into a Conda environment using:
 
-*conda install bioconda::prokka*
+```bash
+conda install bioconda::prokka
+```
 
 Genomes were annotated using the scripts below:
 
@@ -96,7 +100,9 @@ Genomes were annotated using the scripts below:
 ## Visualising Hybrid Assembly
 It was deemed from the Quast Report that there were 3 seperate genetic assemblies present in the Hybrid Assembly. This was visualised using the Genovi package. Install into a Conda environment using:
 
-*conda install bioconda::genovi*
+```bash
+conda install bioconda::genovi
+```
 
 Script Used: [genovi06_1.sh](https://github.com/mbxjy4/LIFE4136-Rot1-Gp2/blob/main/Bar06/Genovi_Scripts/genovi06_1.sh)
 
@@ -104,13 +110,19 @@ Script Used: [genovi06_1.sh](https://github.com/mbxjy4/LIFE4136-Rot1-Gp2/blob/ma
 ## IGV Preperation
 The Long and Short Read assemblies and subsequent alignement was visualised using IGV, available to download [here](https://igv.org/doc/desktop/#DownloadPage/). This software requires sorted .BAM files alongside respective index files. The files were visualised against the reference genome and respective index and .gff files created using the [ref1_prokka.sh](https://github.com/mbxjy4/LIFE4136-Rot1-Gp2/blob/main/Ref_Genomes/Ref_Prokka/ref1_prokka.sh) script. 
 
-Short Read Preperation used bwa and samtools packages. Long Read Preperation used minimap2 and samtools. Install into a Conda environment using:
+Short Read Preperation used bwa and samtools packages. Long Read Preperation used minimap2 and samtools. Install each into a sepearate Conda environment using:
 
-*conda install bioconda::bwa*
+```bash
+conda install bioconda::bwa
+```
 
-*conda install bioconda::minimap2*
+```bash
+conda install bioconda::minimap2
+```
 
-*conda install bioconda::samtools*
+```bash
+conda install bioconda::samtools
+```
 
 Short Read data was prepared for viewing in IGV using the scripts below:
 
