@@ -195,34 +195,42 @@ All scripts and analysis were completed jointly with Areeba and Shifra, thank yo
 ## References
 
 BWA
+
 Li, H., & Durbin, R. (2009). Fast and accurate short read alignment with Burrows–Wheeler transform. Bioinformatics, 25(14), 1754–1760.
 https://doi.org/10.1093/bioinformatics/btp324
 
 Genovi
+
 Laing, C., Buchanan, C., Taboada, E.N., Zhang, Y., Kropinski, A., Villegas, A., & Thomas, J.E. (2021). GENOVI: Rapid quality-controlled prokaryotic genome assembly and annotation pipeline. Microbial Genomics, 7(10).
 https://doi.org/10.1099/mgen.0.000640
 
 Minimap2
+
 Li, H. (2018). Minimap2: pairwise alignment for nucleotide sequences. Bioinformatics, 34(18), 3094–3100.
 https://doi.org/10.1093/bioinformatics/bty191
 
 Nanoplot
+
 De Coster, W., D’Hert, S., Schultz, D.T., Cruts, M., & Van Broeckhoven, C. (2018). NanoPack: visualizing and processing long-read sequencing data. Bioinformatics, 34(15), 2666–2669.
 https://doi.org/10.1093/bioinformatics/bty149
 
 Prokka
+
 Seemann, T. (2014). Prokka: rapid prokaryotic genome annotation. Bioinformatics, 30(14), 2068–2069.
 https://doi.org/10.1093/bioinformatics/btu153
 
 Quast
+
 Gurevich, A., Saveliev, V., Vyahhi, N., & Tesler, G. (2013). QUAST: quality assessment tool for genome assemblies. Bioinformatics, 29(8), 1072–1075.
 https://doi.org/10.1093/bioinformatics/btt086
 
 Samtools
+
 Li, H., Handsaker, B., Wysoker, A., et al. (2009). The Sequence Alignment/Map format and SAMtools. Bioinformatics, 25(16), 2078–2079.
 https://doi.org/10.1093/bioinformatics/btp352
 
 Unicycler
+
 Wick, R.R., Judd, L.M., Gorrie, C.L., & Holt, K.E. (2017). Unicycler: Resolving bacterial genome assemblies from short and long sequencing reads. PLOS Computational Biology, 13(6), e1005595.
 https://doi.org/10.1371/journal.pcbi.1005595
 
