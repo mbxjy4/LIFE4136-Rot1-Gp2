@@ -22,12 +22,12 @@ Note: Please update all directory paths as appropriate to ensure code can run sm
 <!-- TOC --><a name="overview-usage"></a>
 ## Overview & Usage
 
-The aim of this project was to identify genetic changes made by a group of scientists to the genome of a microorganism. The following code represents the order in which steps were followed to achieve this. Please note that packages are required for most steps. I recomend using seperate Conda environments to use these packages, details of how to create and install each are described below. A single Conda environment with all tools may well work, however, I can not be sure as we did not do this and it's possible conflicts may arise through having multiple packages in the same Conda environment.
+The aim of this project was to identify genetic modifications made by a group of scientists to the genome of an unknown microorganism. The following code represents the order in which steps were followed to achieve this. Please note that packages are required for most steps. I recomend using seperate Conda environments to use these packages, details of how to create and install each are described below. A single Conda environment with all tools may well work, however, I can not be sure as we did not do this and it's possible conflicts may arise through having multiple packages in the same Conda environment.
 
 <!-- TOC --><a name="merging-files"></a>
 ## Merging Files
 
-Data was provided in the form of Illumina Short Read (R1 and R2) and Fastq Long Read data (Pass and Fail). Data was merged to make data processing easier using the scripts listed below:
+Data was provided in the form of Illumina Short Reads (Forward - R1 and Reverse - R2) and Fastq Long Read data (Pass and Fail). Data was merged to make downstream data processing easier using the scripts listed below:
 
 |Data Merged|Script Used|Notes|
 |---|---|---|
@@ -40,7 +40,7 @@ Data was provided in the form of Illumina Short Read (R1 and R2) and Fastq Long 
 
 <!-- TOC --><a name="qcing-long-read-files"></a>
 ## QCing Long Read Files
-Short Read Data already had QC reports available and all samples were deemed suitable for analysis. NanoPlot package was used to QC the Long Read data. Install into a Conda environment using:
+Short Read Data already had QC reports available and all samples were deemed suitable for analysis. For Long Read data, NanoPlot was used for QC checking read quality. Install into a Conda environment using:
 
 ```bash
 conda create -n NanoPlot
@@ -107,7 +107,7 @@ Genomes were annotated using the scripts below:
 
 <!-- TOC --><a name="visualising-hybrid-assembly"></a>
 ## Visualising Hybrid Assembly
-It was deemed from the Quast Report that there were 3 seperate genetic assemblies present in the Hybrid Assembly. This was visualised using the Genovi package. Install into a Conda environment using:
+It was deemed from the Quast Report that there were 3 distinct genetic assemblies present in the Hybrid Assembly. This was visualised using the Genovi package. Install into a Conda environment using:
 
 ```bash
 conda create -n Genovi
@@ -189,7 +189,7 @@ Long Read data was prepared for viewing in IGV using the scripts below:
 
 <!-- TOC --><a name="contributors"></a>
 ## Contributors
-All scripts and analysis were completed jointly with Areeba Salman and Shixuan Liu, with additional contributions from Matt Loose and Laura Dean. Thank you all!
+All scripts and analysis were completed jointly with Areeba Salman and Shixuan Liu, with additional contributions from Matt Loose and Laura Dean. Thanks all for your efforts, support and insight!
 
 <!-- TOC --><a name="references"></a>
 ## References
